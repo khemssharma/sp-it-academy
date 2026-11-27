@@ -161,6 +161,12 @@
           </div>
 
           <div class="form-field">
+            <label for="bs-location">Which location do you reside in Bhopal? <span class="req">*</span></label>
+            <input type="text" id="bs-location" name="location" placeholder="e.g. Arera Colony, MP Nagar, Kolar">
+            <span class="form-error" id="bs-location-err" hidden></span>
+          </div>
+
+          <div class="form-field">
             <label for="bs-project">Project Title <span class="req">*</span></label>
             <input type="text" id="bs-project" name="project_title" placeholder="e.g. Sales Analysis Dashboard">
             <span class="form-error" id="bs-project-err" hidden></span>
@@ -278,6 +284,7 @@
       var email = document.getElementById("bs-email");
       var phone = document.getElementById("bs-phone");
       var bootcamp = document.getElementById("bs-bootcamp");
+      var area = document.getElementById("bs-location");
       var project = document.getElementById("bs-project");
       var consent = document.getElementById("bs-consent");
       var message = document.getElementById("bs-message");
@@ -302,7 +309,7 @@
       function validate() {
         var errors = [];
 
-        ["bs-name", "bs-email", "bs-phone", "bs-bootcamp", "bs-project", "bs-consent"]
+        ["bs-name", "bs-email", "bs-phone", "bs-bootcamp", "bs-location", "bs-project", "bs-consent"]
           .forEach(function (id) { showError(id, ""); });
 
         if (!name.value.trim()) {
@@ -326,6 +333,11 @@
         if (!bootcamp.value) {
           errors.push("Please select your bootcamp.");
           showError("bs-bootcamp", "Please select a bootcamp.");
+        }
+
+        if (!area.value.trim()) {
+          errors.push("Please enter your location in Bhopal.");
+          showError("bs-location", "Location is required.");
         }
 
         if (!project.value.trim()) {
