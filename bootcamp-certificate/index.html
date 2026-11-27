@@ -160,6 +160,11 @@
             </div>
           </div>
 
+          <div class="form-field">
+            <label for="bs-location">Which location do you reside in Bhopal? <span class="req">*</span></label>
+            <input type="text" id="bs-location" name="location" placeholder="e.g. Arera Colony, MP Nagar, Kolar">
+            <span class="form-error" id="bs-location-err" hidden></span>
+          </div>
 
           <div class="form-field">
             <label for="bs-project">Project Title <span class="req">*</span></label>
@@ -168,9 +173,9 @@
           </div>
 
           <div class="form-field">
-            <label for="bs-message">Which location do you reside in Bhopal? </label>
+            <label for="bs-message">Additional Notes</label>
             <textarea id="bs-message" name="message" rows="4" maxlength="500"
-                      placeholder="e.g. Arera Colony, MP Nagar, Kolar"></textarea>
+                      placeholder="Anything you want the review team to know about your project?"></textarea>
             <span class="char-counter" id="bs-count" aria-hidden="true">0 / 500</span>
           </div>
 
