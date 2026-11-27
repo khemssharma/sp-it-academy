@@ -161,8 +161,8 @@
           </div>
 
           <div class="form-field">
-            <label for="bs-location">Which location do you reside in Bhopal? <span class="req">*</span></label>
-            <input type="text" id="bs-location" name="location" placeholder="e.g. Arera Colony, MP Nagar, Kolar">
+            <label for="bs-location"> Additional Notes</label>
+            <input type="text" id="bs-location" name="location" placeholder="Anything you want the review team to know about your project?">
             <span class="form-error" id="bs-location-err" hidden></span>
           </div>
 
@@ -173,9 +173,9 @@
           </div>
 
           <div class="form-field">
-            <label for="bs-message">Additional Notes</label>
+            <label for="bs-message">Which location do you reside in Bhopal?<span class="req">*</span></label>
             <textarea id="bs-message" name="message" rows="4" maxlength="500"
-                      placeholder="Anything you want the review team to know about your project?"></textarea>
+                      placeholder="e.g. Arera Colony, MP Nagar, Kolar"></textarea>
             <span class="char-counter" id="bs-count" aria-hidden="true">0 / 500</span>
           </div>
 
@@ -335,10 +335,10 @@
           showError("bs-bootcamp", "Please select a bootcamp.");
         }
 
-        if (!area.value.trim()) {
-          errors.push("Please enter your location in Bhopal.");
-          showError("bs-location", "Location is required.");
-        }
+        // if (!area.value.trim()) {
+        //   errors.push("Please enter your location in Bhopal.");
+        //   showError("bs-location", "Location is required.");
+        // }
 
         if (!project.value.trim()) {
           errors.push("Please enter your project title.");
